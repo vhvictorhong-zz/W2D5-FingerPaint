@@ -12,5 +12,10 @@
 
 @property CGFloat initialPointX;
 @property CGFloat initialPointY;
+//@property CGRect initialRect;
+@property CGContextRef initialContext;
+
+
+-(void)makeInitialPoint:(CGContextRef)ctx;
 
 @end

@@ -22,6 +22,16 @@
     
     [self.view addSubview:view];
     
+    UIPanGestureRecognizer *drawLinePanGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(drawLine:)];
+    
+    [view addGestureRecognizer:drawLinePanGesture];
+    
+}
+
+-(void)drawLine:(UIPanGestureRecognizer *)sender {
+    
+    NSLog(@"pan");
+    
 }
 
 @end

@@ -10,18 +10,23 @@
 
 @implementation FingerPaintDrawing
 
-
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     
     //Get context
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-
+    
     //Fill context color
     CGContextSetFillColorWithColor(ctx, [UIColor redColor].CGColor);
     
     CGContextFillRect(ctx, rect);
+    
+    [self makeInitialPoint:ctx];
+    
+}
+
+-(void)makeInitialPoint:(CGContextRef)ctx{
     
     //Set stroke color
     CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
@@ -36,6 +41,7 @@
     
     //create stroke path
     CGContextStrokePath(ctx);
+
     
 }
 
