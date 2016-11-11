@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FingerPaintDrawing.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    FingerPaintDrawing *view = [[FingerPaintDrawing alloc] initWithFrame:CGRectMake(50, 50, 250, 250)];
+    
+    [self.view addSubview:view];
+    
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

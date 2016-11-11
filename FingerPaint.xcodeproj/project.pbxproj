@@ -15,6 +15,7 @@
 		2B13C3DC1DD6306100302FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B13C3DA1DD6306100302FD0 /* LaunchScreen.storyboard */; };
 		2B13C3E71DD6306100302FD0 /* FingerPaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B13C3E61DD6306100302FD0 /* FingerPaintTests.m */; };
 		2B13C3F21DD6306100302FD0 /* FingerPaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B13C3F11DD6306100302FD0 /* FingerPaintUITests.m */; };
+		2B13C4011DD630BB00302FD0 /* FingerPaintDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B13C4001DD630BB00302FD0 /* FingerPaintDrawing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2B13C3ED1DD6306100302FD0 /* FingerPaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FingerPaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B13C3F11DD6306100302FD0 /* FingerPaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FingerPaintUITests.m; sourceTree = "<group>"; };
 		2B13C3F31DD6306100302FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B13C3FF1DD630BB00302FD0 /* FingerPaintDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerPaintDrawing.h; sourceTree = "<group>"; };
+		2B13C4001DD630BB00302FD0 /* FingerPaintDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerPaintDrawing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				2B13C3D01DD6306100302FD0 /* AppDelegate.m */,
 				2B13C3D21DD6306100302FD0 /* ViewController.h */,
 				2B13C3D31DD6306100302FD0 /* ViewController.m */,
+				2B13C3FF1DD630BB00302FD0 /* FingerPaintDrawing.h */,
+				2B13C4001DD630BB00302FD0 /* FingerPaintDrawing.m */,
 				2B13C3D51DD6306100302FD0 /* Main.storyboard */,
 				2B13C3D81DD6306100302FD0 /* Assets.xcassets */,
 				2B13C3DA1DD6306100302FD0 /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 			files = (
 				2B13C3D41DD6306100302FD0 /* ViewController.m in Sources */,
 				2B13C3D11DD6306100302FD0 /* AppDelegate.m in Sources */,
+				2B13C4011DD630BB00302FD0 /* FingerPaintDrawing.m in Sources */,
 				2B13C3CE1DD6306100302FD0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
