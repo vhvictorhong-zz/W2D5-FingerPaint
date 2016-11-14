@@ -12,10 +12,23 @@
 
 @property CGFloat initialPointX;
 @property CGFloat initialPointY;
+@property CGFloat addPointX;
+@property CGFloat addPointY;
+
+@property float redFloatColor;
+@property float greenFloatColor;
+@property float blueFloatColor;
+@property float alphaFloat;
+
+@property CGFloat strokeWidth;
+
+@property CGColorRef changeColor;
+
 //@property CGRect initialRect;
 @property CGContextRef initialContext;
 
 
 -(void)makeInitialPoint:(CGContextRef)ctx;
+-(void)addPointToStroke:(CGContextRef)ctx andPointX:(CGFloat)addPointX andPointY:(CGFloat)addPointY;
 
 @end

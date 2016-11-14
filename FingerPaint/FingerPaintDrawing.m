@@ -10,6 +10,21 @@
 
 @implementation FingerPaintDrawing
 
+-(instancetype)init {
+    
+    if (self = [super init]) {
+        
+        _initialPointX = 0;
+        _initialPointY = 0;
+        _addPointX = 0;
+        _addPointY = 0;
+        _changeColor = [UIColor blueColor].CGColor;
+        
+    }
+    
+    return self;
+    
+}
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
@@ -28,22 +43,29 @@
 
 -(void)makeInitialPoint:(CGContextRef)ctx{
     
+    self.changeColor = [UIColor colorWithRed:self.redFloatColor green:self.greenFloatColor blue:self.blueFloatColor alpha:self.alphaFloat].CGColor;
+    
     //Set stroke color
-    CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, self.changeColor);
     
     //Initial point
-    CGContextMoveToPoint(ctx, 10, 10);
+    CGContextMoveToPoint(ctx, self.initialPointX, self.initialPointY);
     //move point to
-    CGContextAddLineToPoint(ctx, 50, 20);
-    CGContextAddLineToPoint(ctx, 100, 15);
+    [self addPointToStroke:ctx andPointX:self.addPointX andPointY:self.addPointY];
+    
+    
     //Stroke line width
-    CGContextSetLineWidth(ctx, 20);
+    CGContextSetLineWidth(ctx, self.strokeWidth);
     
     //create stroke path
     CGContextStrokePath(ctx);
-
     
 }
 
+-(void)addPointToStroke:(CGContextRef)ctx andPointX:(CGFloat)addPointX andPointY:(CGFloat)addPointY {
+    
+    CGContextAddLineToPoint(ctx, addPointX, addPointY);
+    
+}
 
 @end
